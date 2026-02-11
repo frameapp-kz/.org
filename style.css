@@ -47,6 +47,10 @@ header {
     border-radius: 50%;
 }
 
+.logo span {
+    white-space: nowrap;
+}
+
 nav {
     margin: auto;
     display: flex;
@@ -90,6 +94,25 @@ nav a.active {
     border-radius: 50%;
     border: 2px solid rgba(255,255,255,0.6);
     object-fit: cover;
+}
+
+.lang-switch {
+    margin-left: 12px;
+    margin-right: 8px;
+}
+
+.lang-switch select {
+    background: rgba(255,255,255,0.15);
+    color: #fff;
+    border: 1px solid rgba(255,255,255,0.35);
+    border-radius: 12px;
+    padding: 6px 10px;
+    font-size: 12px;
+    outline: none;
+}
+
+.lang-switch option {
+    color: #111;
 }
 
 .toast {
@@ -518,12 +541,15 @@ box-shadow: 0 20px 40px rgba(0,0,0,0.6);
 
 @media (max-width: 768px) {
     header {
-        width: 95%;
-        padding: 0 15px;
+        width: 96%;
+        height: 60px;
+        padding: 0 12px;
+        top: 10px;
     }
-    
+
     .center h1 {
-        font-size: 40px;
+        font-size: 30px;
+        line-height: 1.15;
     }
     
     nav {
@@ -566,6 +592,24 @@ box-shadow: 0 20px 40px rgba(0,0,0,0.6);
         width: 240px;
         text-align: center;
     }
+
+    .start {
+        padding: 12px 36px;
+        font-size: 16px;
+    }
+
+    .logo img {
+        width: 32px;
+        height: 32px;
+    }
+
+    .logo span {
+        font-size: 12px;
+    }
+
+    .lang-switch {
+        display: none;
+    }
 }
 
 /* ===== SIDE MENU ===== */
@@ -587,6 +631,26 @@ box-shadow: 0 20px 40px rgba(0,0,0,0.6);
 @media (max-width: 480px) {
     .side-menu {
         width: 82vw;
+    }
+
+    .center h1 {
+        font-size: 24px;
+    }
+
+    .hero-actions .start {
+        width: 210px;
+    }
+
+    .scroll-btn {
+        width: 56px;
+        height: 56px;
+        font-size: 22px;
+    }
+
+    .arrow {
+        width: 44px;
+        height: 44px;
+        font-size: 22px;
     }
 }
 
@@ -662,6 +726,25 @@ box-shadow: 0 20px 40px rgba(0,0,0,0.6);
 .side-links a:hover {
     padding-left: 10px;
     opacity: 0.85;
+}
+
+.side-lang {
+    margin-top: 8px;
+}
+
+.side-lang select {
+    width: 100%;
+    background: rgba(255,255,255,0.12);
+    color: #fff;
+    border: 1px solid rgba(255,255,255,0.35);
+    border-radius: 12px;
+    padding: 8px 10px;
+    font-size: 14px;
+    outline: none;
+}
+
+.side-lang option {
+    color: #111;
 }
 
 .profile-btn {
