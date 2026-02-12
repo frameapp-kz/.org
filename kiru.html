@@ -78,12 +78,12 @@
 <body>
 
 <div class="login-container">
-    <h2>Log In</h2>
-    <input type="email" id="loginEmail" placeholder="Email">
-    <input type="password" id="loginPass" placeholder="Password">
-    <button onclick="login()">Log in</button>
-    <button onclick="loginGuest()" style="margin-top:10px;">Continue as Guest</button>
-    <p>Not registered? <a href="tirkelu.html">Register</a></p>
+    <h2 data-i18n="login_title">Log In</h2>
+    <input type="email" id="loginEmail" placeholder="Email" data-i18n-placeholder="placeholder_email">
+    <input type="password" id="loginPass" placeholder="Password" data-i18n-placeholder="placeholder_password">
+    <button onclick="login()" data-i18n="login_btn">Log in</button>
+    <button onclick="loginGuest()" style="margin-top:10px;" data-i18n="login_guest">Continue as Guest</button>
+    <p><span data-i18n="login_not_registered">Not registered?</span> <a href="tirkelu.html" data-i18n="auth_register">Register</a></p>
 </div>
 
 <script>
@@ -163,6 +163,8 @@
     }
 
 </script>
+
+<script src="lang.js"></script>
 
 </body>
 </html>

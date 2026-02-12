@@ -96,14 +96,14 @@
         <span>FrameAcademy App</span>
     </div>
     <nav>
-        <a href="index.html">HOME</a>
-        <a href="aboutus.html">ABOUT</a>
-        <a href="gallery.html">GALLERY</a>
-        <a href="social.html" class="active">SOCIAL MEDIA</a>
-        <a href="contact.html">CONTACT</a>
+        <a href="index.html" data-i18n="nav_home">HOME</a>
+        <a href="aboutus.html" data-i18n="nav_about">ABOUT</a>
+        <a href="gallery.html" data-i18n="nav_gallery">GALLERY</a>
+        <a href="social.html" class="active" data-i18n="nav_social">SOCIAL MEDIA</a>
+        <a href="contact.html" data-i18n="nav_contact">CONTACT</a>
     </nav>
     <div class="lang-switch">
-        <select aria-label="Language">
+        <select aria-label="Language" data-lang-select>
             <option value="en">English</option>
             <option value="kk">Қазақ Тілі</option>
             <option value="zh">中文</option>
@@ -124,37 +124,37 @@
         </div>
         <h3>USER_NAME</h3>
         <div class="side-email" id="sideEmail">user@email.com</div>
-        <p>City • Age</p>
+        <p data-i18n="profile_meta">City • Age</p>
     </div>
 
     <div class="side-links">
-        <button id="editProfileBtn" class="profile-btn">Edit Profile</button>
+        <button id="editProfileBtn" class="profile-btn" data-i18n="edit_profile">Edit Profile</button>
         <div class="side-lang">
-            <select aria-label="Language">
+            <select aria-label="Language" data-lang-select>
                 <option value="en">English</option>
                 <option value="kk">Қазақ Тілі</option>
                 <option value="zh">中文</option>
             </select>
         </div>
-        <a href="index.html">HOME</a>
-        <a href="aboutus.html">ABOUT</a>
-        <a href="gallery.html">GALLERY</a>
-        <a href="social.html">SOCIAL MEDIA</a>
-        <a href="contact.html">CONTACT</a>
+        <a href="index.html" data-i18n="nav_home">HOME</a>
+        <a href="aboutus.html" data-i18n="nav_about">ABOUT</a>
+        <a href="gallery.html" data-i18n="nav_gallery">GALLERY</a>
+        <a href="social.html" data-i18n="nav_social">SOCIAL MEDIA</a>
+        <a href="contact.html" data-i18n="nav_contact">CONTACT</a>
     </div>
 
     <div class="auth-buttons">
-        <a id="loginBtn" href="kiru.html" class="auth-btn">Log in</a>
-        <a id="registerBtn" href="tirkelu.html" class="auth-btn">Register</a>
-        <button id="logoutBtn" class="auth-btn" onclick="logout()" style="display:none;">Log Out</button>
+        <a id="loginBtn" href="kiru.html" class="auth-btn" data-i18n="auth_login">Log in</a>
+        <a id="registerBtn" href="tirkelu.html" class="auth-btn" data-i18n="auth_register">Register</a>
+        <button id="logoutBtn" class="auth-btn" onclick="logout()" style="display:none;" data-i18n="auth_logout">Log Out</button>
     </div>
 </div>
 
 <div class="side-overlay" id="sideOverlay"></div>
 
 <section class="social-hero">
-    <div class="home-pill">Home page menu</div>
-    <h1 class="social-title">SOCIAL MEDIA</h1>
+    <div class="home-pill" data-i18n="social_pill">Home page menu</div>
+    <h1 class="social-title" data-i18n="social_title">SOCIAL MEDIA</h1>
 
     <div class="social-grid">
         <a class="social-card tiktok" href="#" aria-label="TikTok">
@@ -177,32 +177,32 @@
 
 <div class="profile-modal" id="profileModal">
     <div class="modal-card">
-        <div class="modal-title">Edit Profile</div>
+        <div class="modal-title" data-i18n="profile_title">Edit Profile</div>
         <div class="modal-grid">
             <div class="modal-field">
-                <label for="profileName">Name</label>
-                <input id="profileName" type="text" placeholder="Your name">
+                <label for="profileName" data-i18n="profile_name">Name</label>
+                <input id="profileName" type="text" placeholder="Your name" data-i18n-placeholder="profile_name">
             </div>
             <div class="modal-field">
-                <label for="profileCity">City</label>
-                <input id="profileCity" type="text" placeholder="Your city">
+                <label for="profileCity" data-i18n="profile_city">City</label>
+                <input id="profileCity" type="text" placeholder="Your city" data-i18n-placeholder="profile_city">
             </div>
             <div class="modal-field">
-                <label for="profileAge">Age</label>
-                <input id="profileAge" type="number" min="1" max="120" placeholder="Your age">
+                <label for="profileAge" data-i18n="profile_age">Age</label>
+                <input id="profileAge" type="number" min="1" max="120" placeholder="Your age" data-i18n-placeholder="profile_age">
             </div>
             <div class="modal-field">
-                <label for="profileAvatarFile">Avatar file</label>
+                <label for="profileAvatarFile" data-i18n="profile_avatar">Avatar file</label>
                 <input id="profileAvatarFile" type="file" accept="image/*">
             </div>
         </div>
         <div class="modal-row">
             <img id="profileAvatarPreview" class="avatar-preview" src="https://cdn-icons-png.flaticon.com/512/149/149071.png" alt="Avatar preview">
-            <div>Preview</div>
+            <div data-i18n="profile_preview">Preview</div>
         </div>
         <div class="modal-actions">
-            <button class="btn-secondary" id="profileCancel">Cancel</button>
-            <button class="btn-primary" id="profileSave">Save</button>
+            <button class="btn-secondary" id="profileCancel" data-i18n="profile_cancel">Cancel</button>
+            <button class="btn-primary" id="profileSave" data-i18n="profile_save">Save</button>
         </div>
     </div>
 </div>
@@ -426,6 +426,8 @@
     });
   }
 </script>
+
+<script src="lang.js"></script>
 
 </body>
 </html>
